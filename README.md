@@ -1,4 +1,4 @@
-# wallet
+# wallet for token 
 
 > A Vue.js project
 
