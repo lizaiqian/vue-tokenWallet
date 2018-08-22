@@ -64,8 +64,7 @@
     methods: {
       //进行转账交易
       async handleTransaction() {
-        // console.log(this.address);
-        // console.log(this.transactionEth);
+
         console.log(await web3.eth.getBalance(this.accounts[0]));
         const balance = await web3.eth.getBalance(this.accounts[0])
         if(balance < this.transactionEth) {
@@ -79,11 +78,13 @@
         })
       },
 
+      //登出
       handleLogout() {
         localStorage.removeItem("token");
         this.$router.push('/');
       },
 
+      //导入token代币
       async importToken() {
         const tokenContract = await new web3.eth.Contract(tokenAbi,this.tokenAddress);
         this.tokenContract = tokenContract;
