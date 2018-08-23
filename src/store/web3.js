@@ -13,17 +13,20 @@ const actions = {
     let token = localStorage.getItem(key);
     context.commit('setWeb3',);
   },
-  setWeb3:(context,web3)=>{
-    context.commit('setWeb3',web3);
+  initWeb3: (context, web3) => {
+    context.commit('initWeb3', web3)
   },
-  logout:(context)=>{
-    localStorage.removeItem(key);
-    context.commit('setWeb3',null);
-  }
+  setWeb3Provider:(context,provider)=>{
+    context.commit('setWeb3Provider',provider);
+  },
+
 };
 
 const mutations = {
-  setWeb3: (state, web3) => {
+  setWeb3Provider: (state, provider) => {
+    state.web3.setProvider(provider);
+  },
+  initWeb3: (state, web3) => {
     state.web3 = web3;
   }
 };
