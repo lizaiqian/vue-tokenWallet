@@ -88,6 +88,7 @@
         // console.log(this.transactionEth);
         console.log(await this.web3.eth.getBalance(this.accounts[0]));
         const balance = await this.web3.eth.getBalance(this.accounts[0])
+
         if(balance < this.transactionEth) {
           throw Error('余额不足');
           return;
@@ -119,6 +120,7 @@
       },
 
       //导入代币
+
       async importToken() {
         const tokenContract = await new this.web3.eth.Contract(tokenAbi,this.tokenAddress);
         this.tokenContract = tokenContract;

@@ -1,8 +1,11 @@
-# wallet
+# wallet for token 
 
 > A Vue.js project
 
 ## Build Setup
+
+``` info
+now is only for token address 0xCDF99605Df29870e84a89B32489DC0928CF25734;
 
 ``` bash
 # install dependencies
