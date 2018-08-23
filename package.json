@@ -12,6 +12,7 @@
   "dependencies": {
     "bip39": "^2.5.0",
     "hash.js": "^1.1.5",
+    "solc": "^0.4.24",
     "truffle-hdwallet-provider": "0.0.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
