@@ -39,7 +39,6 @@
         return;
       }
       this.token = JSON.parse(token);
-      // console.log(this.token.mnemonic);
     },
     methods: {
       ...mapActions(['setWeb3']),
@@ -61,7 +60,6 @@
         const passwordHash = hash.sha256().update(this.importPassword).digest("hex");
 
         localStorage.setItem("token", JSON.stringify({mnemonic, password: passwordHash}));
-
         this.$router.push('/home');
       },
 

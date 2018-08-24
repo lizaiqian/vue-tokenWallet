@@ -84,6 +84,12 @@ contract ParrentAddress {
     emit eventCharge(msg.sender);
   }
 
+  function charge(address _to, uint estimateGas) external payable {
+    require(msg.value > estimateGas);
+    balanceOf[_to] += (msg.value - estimateGas);
+    emit eventCharge(_to);
+  }
+
   function putForward(uint _getValue) external {
     require(balanceOf[msg.sender] >= _getValue);
     balanceOf[msg.sender] -= _getValue;
